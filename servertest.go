@@ -12,5 +12,5 @@ io.WriteString(w,"hello world")
 func main(){
 port:=os.Getenv("PORT")
 http.HandleFunc("/",hello)
-http.ListAndServe(":"+port,nil)
+http.ListenAndServe(":"+port,nil)
 }
